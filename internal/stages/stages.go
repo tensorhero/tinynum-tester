@@ -39,6 +39,7 @@ func javaRule(testDriver string) tester_definition.LanguageRule {
 		Language:   "java",
 		Source:     "src/main/java/dev/tensorhero/num4j/NDArray.java",
 		Flags: []string{
+			"-encoding", "UTF-8",
 			"src/main/java/dev/tensorhero/num4j/Slice.java",
 			"src/main/java/dev/tensorhero/num4j/DType.java",
 			"tests/" + testDriver + ".java",
