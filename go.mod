@@ -2,7 +2,7 @@ module github.com/tensorhero/tinynum-tester
 
 go 1.24
 
-require github.com/tensorhero/tester-utils v1.5.0
+require github.com/tensorhero/tester-utils v1.6.0
 
 require (
 	github.com/creack/pty v1.1.24 // indirect
@@ -12,5 +12,3 @@ require (
 	golang.org/x/sys v0.32.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
-
-replace github.com/tensorhero/tester-utils => ../../../tensorhero-tester-utils
