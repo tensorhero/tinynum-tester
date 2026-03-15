@@ -35,13 +35,13 @@ func GetDefinition() tester_definition.TesterDefinition {
 // testDriver is the class name (e.g. "TestE01").
 func javaRule(testDriver string) tester_definition.LanguageRule {
 	return tester_definition.LanguageRule{
-		DetectFile: "src/main/java/dev/tensorhero/num4j/NDArray.java",
+		DetectFile: "src/main/java/dev/tensorhero/tinynum/NDArray.java",
 		Language:   "java",
-		Source:     "src/main/java/dev/tensorhero/num4j/NDArray.java",
+		Source:     "src/main/java/dev/tensorhero/tinynum/NDArray.java",
 		Flags: []string{
 			"-encoding", "UTF-8",
-			"src/main/java/dev/tensorhero/num4j/Slice.java",
-			"src/main/java/dev/tensorhero/num4j/DType.java",
+			"src/main/java/dev/tensorhero/tinynum/Slice.java",
+			"src/main/java/dev/tensorhero/tinynum/DType.java",
 			"tests/" + testDriver + ".java",
 		},
 		RunCmd:  "java",
@@ -53,9 +53,9 @@ func javaRule(testDriver string) tester_definition.LanguageRule {
 // testDriver is the module name without extension (e.g. "test_e01").
 func pythonRule(testDriver string) tester_definition.LanguageRule {
 	return tester_definition.LanguageRule{
-		DetectFile: "num4py/ndarray.py",
+		DetectFile: "tinynum/ndarray.py",
 		Language:   "python",
-		Source:     "num4py/ndarray.py",
+		Source:     "tinynum/ndarray.py",
 		RunCmd:     "python3",
 		RunArgs:    []string{"tests/" + testDriver + ".py"},
 	}
